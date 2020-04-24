@@ -23,7 +23,9 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    self.where("rating = 5")
+    popular_shows = []
+    popular_shows << self.where("rating = 5")
+    popular_shows
   end
 
 end
